@@ -26,12 +26,10 @@
 }
 
 .App-body { 
-  background-color: #72B0F8;
+  background-color: black; 
   min-height: 0vh;
   font-family: 'MyWebFont', Fallback, sans-serif;
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+  color:white; 
 }
 
 .App-header {
@@ -43,15 +41,11 @@
   justify-content: center;
   font-size: calc(7px + 1vmin);
   font-family: 'MyWebFont', Fallback, sans-serif;
-  background-color: #72B0F8;
+  background-color: #63A5FF;
   background-image: url("Clouds_Small.svg");
   background-repeat: repeat;
 
   animation: animatedBackground 10s linear infinite;
-  -moz-animation: animatedBackground 10s linear infinite;
-  -webkit-animation: animatedBackground 10s linear infinite;
-  -ms-animation: animatedBackground 10s linear infinite;
-  -o-animation: animatedBackground 10s linear infinite;
 }
 
 @keyframes gradient {
@@ -68,25 +62,9 @@
 
 @keyframes animatedBackground {
   0% { background-position: 0 0; }
-  100% { background-position: -300px 0; }
+  50% {background-position: -300px 0;}
+  100% { background-position: 150 0; }
 }
-@-moz-keyframes animatedBackground {
-  0% { background-position: 0 0; }
-  100% { background-position: -300px 0; }
-}
-@-webkit-keyframes animatedBackground {
-  0% { background-position: 0 0; }
-  100% { background-position: -300px 0; }
-}
-@-ms-keyframes animatedBackground {
-  0% { background-position: 0 0; }
-  100% { background-position: -300px 0; }
-}
-@-o-keyframes animatedBackground {
-  0% { background-position: 0 0; }
-  100% { background-position: -300px 0; }
-}
-
 
 .App-link {
   color: #61dafb;
