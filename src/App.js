@@ -19,32 +19,32 @@ function App() {
               <Col>
               <Link to="/">
                 <div class="container">
-                  <div class="centered">Home</div>
-                  <img border="0" src={cloudButton} width="150" height="150" />
+                  <div class="centered">HOME</div>
+                  <img border="0" src={cloudButton} width="200" height="200" />
                   </div> 
                 </Link>
               </Col>
               <Col>
               <Link to="/whitepaper">
                 <div class="container">
-                  <div class="centered">Whitepaper</div>
-                  <img border="0" src={cloudButton} width="150" height="150" />
+                  <div class="centered">WHITEPAPER</div>
+                  <img border="0" src={cloudButton} width="200" height="200" />
                   </div> 
                 </Link>
               </Col>
               <Col>
               <Link to="/farm">
                 <div class="container">
-                  <div class="centered">Farm</div>
-                  <img border="0" src={cloudButton} width="150" height="150" />
+                  <div class="centered">FARM</div>
+                  <img border="0" src={cloudButton} width="200" height="200" />
                   </div> 
                 </Link>
               </Col>
               <Col>
               <Link to="/presale">
                 <div class="container">
-                  <div class="centered">Presale</div>
-                  <img border="0" src={cloudButton} width="150" height="150" />
+                  <div class="centered">PRESALE</div>
+                  <img border="0" src={cloudButton} width="200" height="200" />
                   </div> 
                 </Link>
               </Col>
@@ -56,7 +56,7 @@ function App() {
         </header>
 
         <body className='App-body'>
-        Coming soon
+            @2021 The Sporky Team All Right Reseved
    
         </body>
       </Router>
