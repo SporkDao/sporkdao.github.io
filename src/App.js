@@ -5,11 +5,12 @@ import {
   BrowserRouter as Router,
   Link
 } from "react-router-dom";
-import { Container as myContainer, Row, Col } from 'react-grid-system';
+import { Container as myContainer, Row, Col, setConfiguration } from 'react-grid-system';
 
 
 
 function App() {
+  setConfiguration({ defaultScreenClass: 'sm', gridColumns: 4, gutterWidth: 140 });
   return (
     <div className="App">
       <Router>
@@ -25,9 +26,9 @@ function App() {
                 </Link>
               </Col>
               <Col>
-              <Link to="/whitepaper">
+              <Link to="/wiki">
                 <div class="container">
-                  <div class="centered">WHITEPAPER</div>
+                  <div class="centered">WIKI</div>
                   <img border="0" src={cloudButton} width="200" height="200" />
                   </div> 
                 </Link>
@@ -48,6 +49,7 @@ function App() {
                   </div> 
                 </Link>
               </Col>
+              
             </Row>
           </myContainer>
 
