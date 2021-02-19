@@ -18,6 +18,9 @@
       "sizes": "512x512"
     }
   ],
+  "assets": [
+     "CNAME" 
+  ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
