@@ -26,7 +26,7 @@ function App() {
                 </Link>
               </Col>
               <Col>
-              <Link to="/wiki">
+              <Link to="/docs">
                 <div class="container">
                   <div class="centered">WIKI</div>
                   <img border="0" src={cloudButton} width="200" height="200" />
