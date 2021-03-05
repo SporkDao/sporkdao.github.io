@@ -26,27 +26,36 @@
 }
 
 .App-body { 
-  background-color: black; 
-  min-height: 0vh;
+  background-color:black; 
+  min-height: 4vh;
   font-family: 'MyWebFont', Fallback, sans-serif;
   color:white; 
-}
-
-.App-header {
-  /*background-color: #72B0F8;*/
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.App-header {
+  /*background-color: #72B0F8;*/
+  min-height: 96vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-size: calc(7px + 1vmin);
   font-family: 'MyWebFont', Fallback, sans-serif;
   background-color: #3b8ee8;
-  background-image: url("Clouds_Small.svg"); 
+  background-image: url("Clouds_Dual.svg"); 
+  background-size: 300px;
   background-repeat: repeat;
-
-  animation: animatedBackground 10s linear infinite;
+  animation: animatedBackground 60s linear infinite;
+ 
 }
+
+.App-header::before { 
+ 
+}
+
 
 @keyframes gradient {
   0% {

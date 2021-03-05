@@ -3,7 +3,9 @@ import cloudButton from './vector-cloud-SVG.svg';
 import './App.css';
 import {
   BrowserRouter as Router,
-  Link
+  Link, 
+  Switch, 
+  Route 
 } from "react-router-dom";
 import { Container as myContainer, Row, Col, setConfiguration } from 'react-grid-system';
 
@@ -26,7 +28,7 @@ function App() {
                 </Link>
               </Col>
               <Col>
-              <Link to="/docs">
+              <Link to="/docs/docs/index.html">
                 <div class="container">
                   <div class="centered">WIKI</div>
                   <img border="0" src={cloudButton} width="200" height="200" />
@@ -52,20 +54,59 @@ function App() {
               
             </Row>
           </myContainer>
-
-          <img src={logo} className="App-logo" alt="logo" />
+          <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/farm">
+            <Farm />
+          </Route>
+          <Route path="/presale">
+            <Presale />
+          </Route>
+        </Switch>
 
         </header>
 
         <body className='App-body'>
+       
             @2021 The Sporky Team All Right Reseved
    
         </body>
+
+       
       </Router>
 
 
     </div>
   );
 }
+
+
+function Home() {
+  return (
+    <div>
+         <img src={logo} className="App-logo" alt="logo" />
+    </div>
+  );
+}
+
+function Farm() {
+  return (
+    <div>
+      <h2>Farm will arrive shortly after mainnet launch. </h2>
+    </div>
+  );
+}
+
+function Presale() {
+  return (
+    <div>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdbxCVf7N34oDNdFUX_ZKfVz3seEWdnc3g7GYc8_Hr-zHjnFw/viewform?embedded=true" width="640" height="582" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+  );
+}
+
+
 
 export default App;
