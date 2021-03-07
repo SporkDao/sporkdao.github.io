@@ -9,8 +9,21 @@
 }
 
 .App-logo {
+  display: flex;
+  flex-direction: column;
   height: 70vmin;
   pointer-events: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-contacts { 
+  align-items: center;
+  justify-content: center;
+  margin:-80px 25px 10px 0;
+  padding:2px;
+  border:2px solid #021a40;
+  background-color: lightgray;
 }
 
 .container {

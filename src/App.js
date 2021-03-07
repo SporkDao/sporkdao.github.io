@@ -1,11 +1,15 @@
 import logo from './SporkLogoSVG.svg';
+import twitterIcon from './008-twitter.svg'; 
+import mediumIcon from './026-medium.svg'; 
 import cloudButton from './vector-cloud-SVG.svg';
+import telegramIcon from './telegram_icon.png'; 
 import './App.css';
 import {
   BrowserRouter as Router,
   Link, 
   Switch, 
-  Route 
+  Route, 
+  Redirect
 } from "react-router-dom";
 import { Container as myContainer, Row, Col, setConfiguration } from 'react-grid-system';
 
@@ -28,7 +32,7 @@ function App() {
                 </Link>
               </Col>
               <Col>
-              <Link to="/docs/docs/index.html">
+              <Link to={{ pathname: "https://sporkdao.com/docs" }} target="_blank">
                 <div class="container">
                   <div class="centered">WIKI</div>
                   <img border="0" src={cloudButton} width="200" height="200" />
@@ -64,6 +68,7 @@ function App() {
           <Route path="/presale">
             <Presale />
           </Route>
+    
         </Switch>
 
         </header>
@@ -87,6 +92,11 @@ function Home() {
   return (
     <div>
          <img src={logo} className="App-logo" alt="logo" />
+         <a href="https://www.twitter.com/sporkdao">
+          <img src={twitterIcon} className="App-contacts" width="50" height="50"/> 
+        </a> 
+        <a href="https://www.medium.com/sporkdao"><img src={mediumIcon} className="App-contacts"  width="50" height="50" /> </a>
+         <a href="https://t.me/sporkdao">         <img src={telegramIcon} className="App-contacts"  width="50" height="50"/> </a>
     </div>
   );
 }
