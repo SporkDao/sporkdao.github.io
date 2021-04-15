@@ -1,4 +1,4 @@
-import logo from './SporkLogoSVG.svg';
+import myLogo from './SporkLogoSVG.svg';
 import twitterIcon from './008-twitter.svg'; 
 import mediumIcon from './026-medium.svg'; 
 import cloudButton from './vector-cloud-SVG.svg';
@@ -8,8 +8,7 @@ import {
   BrowserRouter as Router,
   Link, 
   Switch, 
-  Route, 
-  Redirect
+  Route
 } from "react-router-dom";
 import { Container as myContainer, Row, Col, setConfiguration } from 'react-grid-system';
 
@@ -74,9 +73,16 @@ function App() {
         </header>
 
         <body className='App-body'>
-       
-            @2021 The Sporky Team All Right Reseved
-   
+        The Sporky Team All Rights Reserved 
+          <div className ='App-contacts'>
+
+            <a href="https://www.twitter.com/sporkdao">
+              <img src={twitterIcon} width="30" height="30"/> 
+            </a> 
+            <a href="https://www.medium.com/sporkdao"><img src={mediumIcon} width="30" height="30" /> </a>
+            <a href="https://t.me/sporkdao">         <img src={telegramIcon} width="30" height="30"/> </a>
+          </div>
+         
         </body>
 
        
@@ -91,12 +97,7 @@ function App() {
 function Home() {
   return (
     <div>
-         <img src={logo} className="App-logo" alt="logo" />
-         <a href="https://www.twitter.com/sporkdao">
-          <img src={twitterIcon} className="App-contacts" width="50" height="50"/> 
-        </a> 
-        <a href="https://www.medium.com/sporkdao"><img src={mediumIcon} className="App-contacts"  width="50" height="50" /> </a>
-         <a href="https://t.me/sporkdao">         <img src={telegramIcon} className="App-contacts"  width="50" height="50"/> </a>
+         <img src={myLogo} className="App-logo" alt="logo" />
     </div>
   );
 }

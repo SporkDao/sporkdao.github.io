@@ -20,10 +20,10 @@
 .App-contacts { 
   align-items: center;
   justify-content: center;
-  margin:-80px 25px 10px 0;
-  padding:2px;
-  border:2px solid #021a40;
-  background-color: lightgray;
+}
+
+.App-contacts a>img { 
+  margin: 0 20px 0 0;
 }
 
 .container {
@@ -40,7 +40,7 @@
 
 .App-body { 
   background-color:black; 
-  min-height: 4vh;
+  min-height: 5vh;
   font-family: 'MyWebFont', Fallback, sans-serif;
   color:white; 
   display: flex;
@@ -51,7 +51,7 @@
 
 .App-header {
   /*background-color: #72B0F8;*/
-  min-height: 96vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
