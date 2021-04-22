@@ -31,7 +31,7 @@ function App() {
                 </Link>
               </Col>
               <Col>
-              <Link to={{ pathname: "https://sporkdao.com/docs" }} target="_blank">
+              <Link to={{ pathname: "https://sporkdao.gitbook.io/sporkdao/" }} target="_blank">
                 <div class="container">
                   <div class="centered">WIKI</div>
                   <img border="0" src={cloudButton} width="200" height="200" />
