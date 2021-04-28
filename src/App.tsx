@@ -22,7 +22,7 @@ const imgStyle = {
 }
 
 function App() {
-  setConfiguration({ defaultScreenClass: 'sm', gridColumns: 4, gutterWidth: 120 });
+  setConfiguration({ defaultScreenClass: 'sm', gridColumns: 4, gutterWidth: 140 });
   return (
     <div className="App">
       <HttpsRedirect>
