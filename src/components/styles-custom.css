@@ -1,0 +1,24 @@
+input[type="email"],
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 80vw;
+}
+
+label {
+  margin-top: 1rem;
+  font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+  "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial,
+  sans-serif;
+}
+
+label.checkbox {
+    font-family: -apple-system, BlinkMacSystemFont, "avenir next", avenir,
+    "helvetica neue", helvetica, ubuntu, roboto, noto, "segoe ui", arial,
+    sans-serif;
+}
+
+button[type="submit"] {
+  margin-top: 1rem;
+}
