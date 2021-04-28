@@ -4,6 +4,7 @@ import mediumIcon from './026-medium.svg';
 import cloudButton from './vector-cloud-SVG.svg';
 import telegramIcon from './telegram_icon.png';
 import HttpsRedirect from 'react-https-redirect';
+import Presale from './components/presale';
 
 import './App.css';
 import {
@@ -12,9 +13,13 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import { Container as myContainer, Row, Col, setConfiguration } from 'react-grid-system';
+import { Container as MyContainer, Row, Col, setConfiguration } from 'react-grid-system';
+import ThankYou from './components/thankyou';
 
 
+const imgStyle = { 
+  border: '0'
+}
 
 function App() {
   setConfiguration({ defaultScreenClass: 'sm', gridColumns: 4, gutterWidth: 140 });
@@ -23,43 +28,43 @@ function App() {
       <HttpsRedirect>
         <Router>
           <header className="App-header">
-            <myContainer>
+            <MyContainer>
               <Row justify="between" debug>
                 <Col>
                   <Link to="/">
-                    <div class="container">
-                      <div class="centered">HOME</div>
-                      <img border="0" src={cloudButton} width="200" height="200" />
+                    <div className ="container">
+                      <div className ="centered">HOME</div>
+                      <img style={imgStyle} src={cloudButton} width="200" height="200" />
                     </div>
                   </Link>
                 </Col>
                 <Col>
                   <Link to={{ pathname: "https://sporkdao.gitbook.io/sporkdao/" }} target="_blank">
-                    <div class="container">
-                      <div class="centered">WIKI</div>
-                      <img border="0" src={cloudButton} width="200" height="200" />
+                    <div className="container">
+                      <div className ="centered">WIKI</div>
+                      <img style={imgStyle} src={cloudButton} width="200" height="200" />
                     </div>
                   </Link>
                 </Col>
                 <Col>
                   <Link to="/farm">
-                    <div class="container">
-                      <div class="centered">FARM</div>
-                      <img border="0" src={cloudButton} width="200" height="200" />
+                    <div className="container">
+                      <div className="centered">FARM</div>
+                      <img style={imgStyle} src={cloudButton} width="200" height="200" />
                     </div>
                   </Link>
                 </Col>
                 <Col>
                   <Link to="/presale">
-                    <div class="container">
-                      <div class="centered">PRESALE</div>
-                      <img border="0" src={cloudButton} width="200" height="200" />
+                    <div className="container">
+                      <div className="centered">PRESALE</div>
+                      <img style={imgStyle} src={cloudButton} width="200" height="200" />
                     </div>
                   </Link>
                 </Col>
 
               </Row>
-            </myContainer>
+            </MyContainer>
             <Switch>
               <Route exact path="/">
                 <Home />
@@ -68,7 +73,10 @@ function App() {
                 <Farm />
               </Route>
               <Route path="/presale">
-                <Presale />
+                <Presale/> 
+              </Route>
+              <Route path="/thank-you"> 
+                <ThankYou/> 
               </Route>
 
             </Switch>
@@ -109,15 +117,5 @@ function Farm() {
     </div>
   );
 }
-
-function Presale() {
-  return (
-    <div>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdbxCVf7N34oDNdFUX_ZKfVz3seEWdnc3g7GYc8_Hr-zHjnFw/viewform?embedded=true" width="640" height="582" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
-  );
-}
-
-
 
 export default App;
