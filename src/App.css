@@ -29,6 +29,10 @@
 .container {
 }
 
+.nav-container { 
+  max-width: 85vw;
+}
+
 .centered {
   position: absolute;
   color: black;
