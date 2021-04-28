@@ -130,7 +130,7 @@ class Presale extends React.Component<UserProps>{
         })}
         onSubmit={async (values, { setSubmitting }) => {
           await new Promise(r => setTimeout(r, 500));
-          emailjs.init("user_DuLyO9KOGGv7glRypS9BV");
+         /* emailjs.init("user_DuLyO9KOGGv7glRypS9BV");
           emailjs.send("service_ufehmlc","template_brq977p", {
             email: values.email,
             telegramUsername: values.telegramUsername,
@@ -138,7 +138,8 @@ class Presale extends React.Component<UserProps>{
             tweetURLShares: values.tweetURLShares,
             walletAddress: values.walletAddress,
             valueBring: values.valueBring,
-          }); 
+          }); */ 
+          console.log(JSON.stringify(values)); 
           this.props.history.push("/thank-you"); 
           setSubmitting(false);
         }}
