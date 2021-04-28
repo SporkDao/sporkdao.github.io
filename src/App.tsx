@@ -18,23 +18,24 @@ import ThankYou from './components/thankyou';
 
 
 const imgStyle = { 
-  border: '0'
+  border: '0',
+  style: "width: 10px; height:10px;"
 }
 
 function App() {
-  setConfiguration({ defaultScreenClass: 'sm', gridColumns: 4, gutterWidth: 140 });
+  setConfiguration({ defaultScreenClass: 'md', gridColumns: 4, gutterWidth: 80});
   return (
     <div className="App">
       <HttpsRedirect>
         <Router>
           <header className="App-header">
-            <MyContainer>
+            <MyContainer className="nav-container">
               <Row justify="between" debug>
                 <Col>
                   <Link to="/">
                     <div className ="container">
                       <div className ="centered">HOME</div>
-                      <img style={imgStyle} src={cloudButton} width="200" height="200" />
+                      <img style={imgStyle} src={cloudButton} />
                     </div>
                   </Link>
                 </Col>
@@ -42,7 +43,7 @@ function App() {
                   <Link to={{ pathname: "https://sporkdao.gitbook.io/sporkdao/" }} target="_blank">
                     <div className="container">
                       <div className ="centered">WIKI</div>
-                      <img style={imgStyle} src={cloudButton} width="200" height="200" />
+                      <img style={imgStyle} src={cloudButton} />
                     </div>
                   </Link>
                 </Col>
@@ -50,7 +51,7 @@ function App() {
                   <Link to="/farm">
                     <div className="container">
                       <div className="centered">FARM</div>
-                      <img style={imgStyle} src={cloudButton} width="200" height="200" />
+                      <img style={imgStyle} src={cloudButton} />
                     </div>
                   </Link>
                 </Col>
@@ -58,11 +59,10 @@ function App() {
                   <Link to="/presale">
                     <div className="container">
                       <div className="centered">PRESALE</div>
-                      <img style={imgStyle} src={cloudButton} width="200" height="200" />
+                      <img style={imgStyle} src={cloudButton} />
                     </div>
                   </Link>
                 </Col>
-
               </Row>
             </MyContainer>
             <Switch>
