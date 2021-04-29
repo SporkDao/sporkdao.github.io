@@ -19,7 +19,7 @@ import ThankYou from './components/thankyou';
 
 const imgStyle = { 
   border: '0',
-  style: "width: 10px; height:10px;"
+  style: "width: 10px; height:10px"
 }
 
 function App() {
@@ -83,7 +83,7 @@ function App() {
 
           </header>
 
-          <body className='App-body'>
+          <div className='App-body'>
             The Sporky Team All Rights Reserved
           <div className='App-contacts'>
 
@@ -94,7 +94,7 @@ function App() {
               <a href="https://t.me/sporkdao">         <img src={telegramIcon} width="30" height="30" /> </a>
             </div>
 
-          </body>
+          </div>
         </Router>
       </HttpsRedirect>
     </div>
