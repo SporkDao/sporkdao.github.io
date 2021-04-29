@@ -130,15 +130,20 @@ class Presale extends React.Component<UserProps>{
         })}
         onSubmit={async (values, { setSubmitting }) => {
           await new Promise(r => setTimeout(r, 500));
-         /* emailjs.init("user_DuLyO9KOGGv7glRypS9BV");
-          emailjs.send("service_ufehmlc","template_brq977p", {
+          emailjs.init("user_DuLyO9KOGGv7glRypS9BV");
+          emailjs.send("service_ufehmlc","template_brq977p",  {
             email: values.email,
             telegramUsername: values.telegramUsername,
             twitterHandle: values.twitterHandle,
             tweetURLShares: values.tweetURLShares,
             walletAddress: values.walletAddress,
             valueBring: values.valueBring,
-          }); */ 
+          })
+          .then(function(response) {
+            console.log('SUCCESS!', response.status, response.text);
+         }, function(error) {
+            console.log('FAILED...', error);
+         }); 
           console.log(JSON.stringify(values)); 
           this.props.history.push("/thank-you"); 
           setSubmitting(false);
